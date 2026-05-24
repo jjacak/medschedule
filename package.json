@@ -1,6 +1,7 @@
 {
   "name": "medschedule",
   "version": "1.0.0",
+  "packageManager": "pnpm@11.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
