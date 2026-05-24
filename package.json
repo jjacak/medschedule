@@ -4,6 +4,13 @@
   "packageManager": "pnpm@11.2.2",
   "description": "",
   "main": "index.js",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "msw",
+      "unrs-resolver"
+    ]
+  },
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
