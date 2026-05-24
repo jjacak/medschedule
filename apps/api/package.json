@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@hono/node-server": "^2.0.3",
+    "dotenv": "^17.4.2",
+    "hono": "^4.12.22"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3"
+  }
+}
