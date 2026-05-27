@@ -3,3 +3,8 @@ packages:
   - packages/*
 allowBuilds:
   esbuild: false
+
+onlyBuiltDependencies:
+  - sharp
+  - msw
+  - unrs-resolver
