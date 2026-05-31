@@ -1,6 +1,12 @@
 ---
 lockfileVersion: '9.0'
 
+onlyBuiltDependencies:
+  - esbuild
+  - msw
+  - sharp
+  - unrs-resolver
+
 importers:
 
   .:
