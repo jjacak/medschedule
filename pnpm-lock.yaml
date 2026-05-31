@@ -1,12 +1,6 @@
 ---
 lockfileVersion: '9.0'
 
-onlyBuiltDependencies:
-  - esbuild
-  - msw
-  - sharp
-  - unrs-resolver
-
 importers:
 
   .:
@@ -208,6 +202,12 @@ lockfileVersion: '9.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+
+onlyBuiltDependencies:
+  - esbuild
+  - msw
+  - sharp
+  - unrs-resolver
 
 importers:
 
