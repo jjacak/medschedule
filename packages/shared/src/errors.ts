@@ -10,6 +10,10 @@ export const ErrorCode = {
   EMAIL_TAKEN: "auth.register.email_taken",
   INVALID_CREDENTIALS: "auth.login.invalid_credentials",
   USER_NOT_FOUND: "auth.user_not_found",
+
+  // server
+  INTERNAL_ERROR: "errors.internal",
+  TOO_MANY_REQUESTS: "errors.too_many_requests",
 } as const;
 
 export type ErrorCode = (typeof ErrorCode)[keyof typeof ErrorCode];

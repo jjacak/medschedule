@@ -3,8 +3,11 @@ import { serve } from "@hono/node-server";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import "dotenv/config";
-
 import { authRoutes } from "./routes/auth.js";
+import { ErrorCode } from "shared";
+
+if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
+if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not set");
 
 const app = new Hono();
 
@@ -20,6 +23,11 @@ app.use("*", logger());
 app.route("/auth", authRoutes);
 
 app.get("/health", (c) => c.json({ ok: true }));
+
+app.onError((err, c) => {
+  console.error(err);
+  return c.json({ error: ErrorCode.INTERNAL_ERROR }, 500);
+});
 
 const port = Number(process.env.PORT ?? 3001);
 serve({ fetch: app.fetch, port });

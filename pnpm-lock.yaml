@@ -258,6 +258,9 @@ importers:
       hono:
         specifier: ^4.12.22
         version: 4.12.22
+      hono-rate-limiter:
+        specifier: ^0.4.2
+        version: 0.4.2(hono@4.12.22)
       jose:
         specifier: ^5.9.0
         version: 5.10.0
@@ -267,6 +270,9 @@ importers:
       shared:
         specifier: workspace:*
         version: link:../../packages/shared
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
       '@types/bcryptjs':
         specifier: ^2.4.6
@@ -2742,6 +2748,11 @@ packages:
 
   hermes-parser@0.25.1:
     resolution: {integrity: sha512-6pEjquH3rqaI6cYAXYPcz9MS4rY6R4ngRgrgfDshRptUZIc3lw0MCIJIGDj9++mfySOuPTHB4nrSW99BCvOPIA==}
+
+  hono-rate-limiter@0.4.2:
+    resolution: {integrity: sha512-AAtFqgADyrmbDijcRTT/HJfwqfvhalya2Zo+MgfdrMPas3zSMD8SU03cv+ZsYwRU1swv7zgVt0shwN059yzhjw==}
+    peerDependencies:
+      hono: ^4.1.1
 
   hono@4.12.22:
     resolution: {integrity: sha512-7fvVPbB92zNRsQke+uiRGwtTuef0tB2Dg4hWxYfFNvkQhIltWoyi0ONReM5LWA+jJWS3nfT5lTq+qbsIpX0IQw==}
@@ -6397,6 +6408,10 @@ snapshots:
   hermes-parser@0.25.1:
     dependencies:
       hermes-estree: 0.25.1
+
+  hono-rate-limiter@0.4.2(hono@4.12.22):
+    dependencies:
+      hono: 4.12.22
 
   hono@4.12.22: {}
 
