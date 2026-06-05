@@ -5,6 +5,7 @@ import { logger } from "hono/logger";
 import "dotenv/config";
 import { authRoutes } from "./routes/auth.js";
 import { ErrorCode } from "shared";
+import { AppError } from "./lib/app-error.js";
 
 if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is not set");
 if (!process.env.JWT_SECRET) throw new Error("JWT_SECRET is not set");
@@ -25,6 +26,7 @@ app.route("/auth", authRoutes);
 app.get("/health", (c) => c.json({ ok: true }));
 
 app.onError((err, c) => {
+  if (err instanceof AppError) return c.json({ error: err.code }, err.status);
   console.error(err);
   return c.json({ error: ErrorCode.INTERNAL_ERROR }, 500);
 });
