@@ -4,6 +4,8 @@ import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import "dotenv/config";
 import { authRoutes } from "./routes/auth.js";
+import { clinicRoutes } from "./routes/clinics.js";
+import { invitationRoutes } from "./routes/invitations.js";
 import { ErrorCode } from "shared";
 import { AppError } from "./lib/app-error.js";
 
@@ -22,6 +24,8 @@ app.use(
 app.use("*", logger());
 
 app.route("/auth", authRoutes);
+app.route("/clinics", clinicRoutes);
+app.route("/invitations", invitationRoutes);
 
 app.get("/health", (c) => c.json({ ok: true }));
 

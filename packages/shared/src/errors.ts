@@ -11,6 +11,15 @@ export const ErrorCode = {
   INVALID_CREDENTIALS: "auth.login.invalid_credentials",
   USER_NOT_FOUND: "auth.user_not_found",
 
+  // clinics
+  CLINIC_NOT_FOUND: "clinics.not_found",
+  FORBIDDEN: "clinics.forbidden",
+
+  // invitations
+  INVITATION_NOT_FOUND: "invitations.not_found",
+  INVITATION_EXPIRED: "invitations.expired",
+  ALREADY_MEMBER: "invitations.already_member",
+
   // server
   INTERNAL_ERROR: "errors.internal",
   TOO_MANY_REQUESTS: "errors.too_many_requests",

@@ -1,7 +1,6 @@
 import type { Context } from "hono";
 import { ErrorCode } from "shared";
-
-type Status = 400 | 401 | 403 | 404 | 409 | 500;
+import type { Status } from "./types.js";
 
 interface ParseIssue {
   code: string;
