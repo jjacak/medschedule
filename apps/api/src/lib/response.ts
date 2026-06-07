@@ -6,6 +6,7 @@ interface ParseIssue {
   code: string;
   path: PropertyKey[];
   format?: string;
+  message?: string;
 }
 
 export function apiError(c: Context, code: ErrorCode, status: Status) {
@@ -13,6 +14,9 @@ export function apiError(c: Context, code: ErrorCode, status: Status) {
 }
 
 function issueToCode(issue: ParseIssue): ErrorCode {
+  if (issue.code === "custom" && issue.message) {
+    return issue.message as ErrorCode;
+  }
   if (issue.code === "invalid_format" && issue.format === "email") {
     return ErrorCode.INVALID_EMAIL;
   }

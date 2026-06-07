@@ -98,7 +98,7 @@ export const scheduleRules = pgTable("schedule_rules", {
   specificDate: date("specific_date"),
   slotFrom: time("slot_from").notNull(),
   slotTo: time("slot_to").notNull(),
-  slotDurationMin: integer("slot_duration_min").notNull(),
+  appointmentDurationMin: integer("appointment_duration_min").notNull(),
   isActive: boolean("is_active").notNull().default(true),
 });
 
