@@ -26,6 +26,12 @@ export const ErrorCode = {
   DATE_RANGE_PARTIAL: "errors.date_range_partial",
   DATE_RANGE_INVALID: "errors.date_range_invalid",
 
+  // appointments
+  APPOINTMENT_NOT_FOUND: "appointments.not_found",
+  SLOT_NOT_AVAILABLE: "appointments.slot_not_available",
+  SLOT_INVALID: "appointments.slot_invalid",
+  CANCELLATION_REQUEST_NOT_FOUND: "appointments.cancellation_request_not_found",
+
   // server
   INTERNAL_ERROR: "errors.internal",
   TOO_MANY_REQUESTS: "errors.too_many_requests",

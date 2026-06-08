@@ -3,4 +3,4 @@ export type AppVariables = {
   role: "doctor" | "receptionist";
 };
 
-export type Status = 400 | 401 | 403 | 404 | 409 | 410 | 500;
+export type Status = 400 | 401 | 403 | 404 | 409 | 410 | 422 | 500;

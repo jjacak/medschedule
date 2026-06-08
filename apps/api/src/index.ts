@@ -7,6 +7,7 @@ import { authRoutes } from "./routes/auth.js";
 import { clinicRoutes } from "./routes/clinics.js";
 import { invitationRoutes } from "./routes/invitations.js";
 import { scheduleRuleRoutes } from "./routes/schedule-rules.js";
+import { appointmentRoutes } from "./routes/appointments.js";
 import { ErrorCode } from "shared";
 import { AppError } from "./lib/app-error.js";
 
@@ -28,6 +29,7 @@ app.route("/auth", authRoutes);
 app.route("/clinics", clinicRoutes);
 app.route("/invitations", invitationRoutes);
 app.route("/", scheduleRuleRoutes);
+app.route("/", appointmentRoutes);
 
 app.get("/health", (c) => c.json({ ok: true }));
 
