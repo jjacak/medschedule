@@ -32,6 +32,9 @@ export const ErrorCode = {
   SLOT_INVALID: "appointments.slot_invalid",
   CANCELLATION_REQUEST_NOT_FOUND: "appointments.cancellation_request_not_found",
 
+  // alerts
+  ALERT_NOT_FOUND: "alerts.not_found",
+
   // server
   INTERNAL_ERROR: "errors.internal",
   TOO_MANY_REQUESTS: "errors.too_many_requests",
